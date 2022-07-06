@@ -20,8 +20,8 @@ public class Main {
 
                 int color = getColor(z);
 
-                c.draw64Color(i, j, color - 192);
-                // c.draw16Color(i, j, color-240);
+               // c.draw64Color(i, j, color - 192);
+                c.draw16Color(i, j, color-240);
 
             }
         }
