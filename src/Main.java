@@ -4,10 +4,11 @@ public class Main {
         int width = 100;
         int height = 50;
 
-        int x0 = (width / 2);
-        int y0 = (height / 2);
-        double lenghtX0 = 20.0;
-        double lenghtY0 = 10.0;
+        double x0 = (width / 2);
+        double y0 = (height / 2);
+        double scale = 10;
+        double lenghtX0 = 2 * scale;
+        double lenghtY0 = 1 * scale;
         ConsolDraw c = new ConsolDraw(width, height);
         Complex z;
         c.clsBorder();
@@ -15,12 +16,12 @@ public class Main {
             for (int j = 1; j < height - 1; j++) {
                 double x = (i - x0) / lenghtX0;
                 double y = (j - y0) / lenghtY0;
-                z = new Complex(x,y);
+                z = new Complex(x, y);
 
                 int color = getColor(z);
 
-                    //c.draw64Color(i, j, color-192);
-                    c.draw16Color(i, j, color-240);
+                c.draw64Color(i, j, color - 192);
+                // c.draw16Color(i, j, color-240);
 
             }
         }
@@ -39,7 +40,6 @@ public class Main {
         }
         return 0;
     }
-
 
 
 }
