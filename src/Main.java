@@ -19,7 +19,8 @@ public class Main {
 
                 int color = getColor(z);
 
-                    c.drawChar(i, j, adaptColor(color));
+                    //c.draw64Color(i, j, color-192);
+                    c.draw16Color(i, j, color-240);
 
             }
         }
@@ -39,20 +40,6 @@ public class Main {
         return 0;
     }
 
-    private static int adaptColor(int color) {
-        switch (color) {
-            case (252):
-                return 1;
-            case (253):
-                return 2;
-            case (254):
-                return 3;
-            case (255):
-                return 4;
-
-        }
-        return 0;
-    }
 
 
 }
